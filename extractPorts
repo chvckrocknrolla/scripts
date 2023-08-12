@@ -1,4 +1,4 @@
-# This script aids in automating Nmap scans for port analysis and services
+# This script aids in automating Nmap scans for port analysis and services and it must be inside ~/.zshrc
 # Extract nmap information
 function extractPorts() {
   ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
