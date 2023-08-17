@@ -33,8 +33,7 @@ trap ctrl_c INT
 tput civis
 
 for port in $(seq 1 65535); do
-    timeout 1 bash -c "echo '' > /dev/tcp/10.10.0.134/$port" 2>/dev/null && echo "Port $port - Open" &
-done
-wait
+    timeout 1 bash -c "echo '' > /dev/tcp/INSERT-IP-HERE/$port" 2>/dev/null && echo "Port $port - Open" &
+done; wait
 
 tput cnorm
